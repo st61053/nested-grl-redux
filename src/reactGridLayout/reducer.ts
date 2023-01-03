@@ -1,4 +1,4 @@
-import { AppAction } from '../types/global';
+import { AppAction } from '../global';
 import { CHANGE_LAYOUT } from './constants';
 import { ILayoutState } from './types';
 

@@ -1,4 +1,4 @@
-import { AppAction } from '../types/global';
+import { AppAction } from '../global';
 import { CHANGE_NESTED_LAYOUT } from './constants';
 import { IDatabaseState } from './types';
 
@@ -29,6 +29,12 @@ const defaultState: IDatabaseState = {
                         { i: 'v', w: 6, h: 6, x: 6, y: 0, moved: false, static: false },
                         { i: 'x', w: 6, h: 2, x: 0, y: 0, moved: false, static: false },
                         { i: 'y', w: 12, h: 3, x: 0, y: 8, moved: false, static: false },
+                    ],
+                    md: [
+                        { i: 'u', w: 6, h: 4, x: 0, y: 3, moved: false, static: false },
+                        { i: 'v', w: 6, h: 6, x: 6, y: 0, moved: false, static: false },
+                        { i: 'x', w: 6, h: 2, x: 0, y: 0, moved: false, static: false },
+                        { i: 'y', w: 6, h: 3, x: 0, y: 8, moved: false, static: false },
                     ]
                 }
             }

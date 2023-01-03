@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
-import { GlobalState } from "../types/global";
+import { GlobalState } from "../global";
 
 export const getContent = (id: string) =>
   createSelector(

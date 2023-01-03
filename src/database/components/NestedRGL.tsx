@@ -12,7 +12,7 @@ import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeLayout } from '../../reactGridLayout/actions';
-import { GlobalState } from '../../types/global';
+import { GlobalState } from '../../global';
 import { changeNestedLayout } from '../actions';
 import RGLBar from './RGLBar';
 
@@ -59,13 +59,17 @@ const NestedRGL = ({ layout, i }) => {
     return (
         <ResponsiveReactGridLayout
             className="layout"
+
             breakpoints={{ lg: 1200 }}
-            cols={{ lg: 12 }}
+            cols={{ lg: 12}}
+
             layouts={layout.layout}
             margin={[margin, margin]}
             rowHeight={rowHeight}
             isBounded={false}
+
             onLayoutChange={(layout) => onLayoutChange(layout)}
+
             onResizeStop={(layout) => minHeight(layout)}
             onDragStop={(layout) => minHeight(layout)}
         >

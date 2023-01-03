@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import { GlobalState } from '../../types/global';
+import { GlobalState } from '../../global';
 import { Responsive, WidthProvider } from "react-grid-layout";
 
 // RGL styles
@@ -43,8 +43,8 @@ const ReactGridLayout = () => {
     return (
         <ResponsiveReactGridLayout
             className="layout"
-            breakpoints={{ lg: 1200 }}
-            cols={{ lg: 12 }}
+            breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
+            cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
             layouts={layout.layout}
             margin={[margin, margin]}
             rowHeight={rowHeight}

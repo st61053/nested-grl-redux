@@ -12,17 +12,7 @@ const RGLContent = ({ i }) => {
     const content = useSelector(getContent(i));
     return (
         <Card sx={{ height: "100%" }} >
-            <CardHeader sx={{ backgroundColor: "#f5f5f5", padding: "0.5em 0.5em" }} title={`item: ${i}`} disableTypography={true}>
-                {/* <Typography
-                    variant="h6"
-                    style={{ fontWeight: "bold", color: "white" }}
-                    component="div"
-                >
-                    {`${i}`}
-                </Typography> */}
-
-
-            </CardHeader>
+            <CardHeader sx={{ backgroundColor: "#f5f5f5", padding: "0.5em 0.5em" }} title={`item: ${i}`} disableTypography={true} />
             <CardContent className='nested-item' sx={{ height: "100%", padding: 0, justifyContent: "center" }}>
                 <Box sx={{ height: "100%" }}>
                     {content && content.text && <Text text={content.text} />}

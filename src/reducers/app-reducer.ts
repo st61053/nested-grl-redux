@@ -1,5 +1,5 @@
 import { INCREASE_COUNTER } from '../constants/exampleConstants';
-import { AppAction, AppState } from '../types/global';
+import { AppAction, AppState } from '../global';
 
 const defaultState: AppState = {
   counter: 0
