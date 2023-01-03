@@ -26,8 +26,8 @@ const defaultState: IDatabaseState = {
                 layout: {
                     lg: [
                         { i: 'u', w: 6, h: 4, x: 0, y: 3, moved: false, static: false },
-                        { i: 'v', w: 6, h: 5, x: 6, y: 0, moved: false, static: false },
-                        { i: 'x', w: 6, h: 1, x: 0, y: 0, moved: false, static: false },
+                        { i: 'v', w: 6, h: 6, x: 6, y: 0, moved: false, static: false },
+                        { i: 'x', w: 6, h: 2, x: 0, y: 0, moved: false, static: false },
                         { i: 'y', w: 12, h: 3, x: 0, y: 8, moved: false, static: false },
                     ]
                 }
@@ -44,8 +44,8 @@ const defaultState: IDatabaseState = {
                 type: "nested",
                 layout: {
                     lg: [
-                        { i: 'k', w: 3, h: 1, x: 0, y: 0, moved: false, static: false },
-                        { i: 'l', w: 3, h: 1, x: 3, y: 0, moved: false, static: false },
+                        { i: 'k', w: 3, h: 2, x: 0, y: 0, moved: false, static: false },
+                        { i: 'l', w: 3, h: 2, x: 3, y: 0, moved: false, static: false },
                     ]
                 }
             }

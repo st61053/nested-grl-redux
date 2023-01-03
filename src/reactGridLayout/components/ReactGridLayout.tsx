@@ -19,32 +19,41 @@ const ReactGridLayout = () => {
     const dispatch = useDispatch<ThunkDispatch<{}, {}, AnyAction>>();
     const ResponsiveReactGridLayout = WidthProvider(Responsive);
     const rowHeight = 50;
-    const margin = 20;
+    const margin = 18;
+
+    const reflowHighcharts = () => {
+        setTimeout(() => {
+            Highcharts.charts.map((chart) => chart !== undefined? chart.reflow: "")
+        }, 50)
+    }
 
     const onLayoutChange = (layout) => {
         dispatch(changeLayout({ lg: [...layout] }))
-        setTimeout(() => {
-            for (let i = 0; i < Highcharts.charts.length; i += 1) {
-                if (Highcharts.charts[i] !== undefined) {
-                    Highcharts.charts[i].reflow(); // here is the magic to update charts' looking
-                }
-            }
-        }, 50)
+        reflowHighcharts()
     };
+
+    React.useEffect(() => {
+        const handleResize = () => {
+            dispatch(changeLayout(layout.layout))
+            reflowHighcharts()
+        }
+        window.addEventListener('resize', handleResize)
+    }, [])
 
     return (
         <ResponsiveReactGridLayout
             className="layout"
-            breakpoints={{ lg: 1200}}
+            breakpoints={{ lg: 1200 }}
             cols={{ lg: 12 }}
             layouts={layout.layout}
             margin={[margin, margin]}
             rowHeight={rowHeight}
             draggableCancel={".nested-item"}
-            onLayoutChange={(layout) => onLayoutChange(layout)}
+            onResizeStop={(layout) => onLayoutChange(layout)}
+            onDragStop={(layout) => onLayoutChange(layout)}
         >
             {layout && layout.layout.lg.map((item) =>
-                <Box key={item.i} style={{ border: "1px solid black", backgroundColor: "white", }}><RGLContent i={item.i} /></Box>
+                <Box key={item.i} ><RGLContent i={item.i} /></Box>
             )}
 
         </ResponsiveReactGridLayout >
