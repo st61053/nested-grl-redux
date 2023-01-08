@@ -17,11 +17,6 @@ import {
     const [openMenu, setOpenMenu] = useState(false);
     const page = useSelector((state: GlobalState) => state.page);
     const isSmDown = useMediaQuery(theme.breakpoints.down("sm"));
-
-  
-    useEffect(() => {
-      console.log(isSmDown);
-    }, [isSmDown])
   
     return (
       <Box sx={{ display: "flex", minHeight: "100vh" }}>

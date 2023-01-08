@@ -1,10 +1,8 @@
 import { IDatabaseState } from "./database/types";
 import { IPageState } from "./pages/types";
-import { ILayoutState } from "./reactGridLayout/types";
 
 interface GlobalState {
   data: AppState;
-  layouts: ILayoutState;
   database: IDatabaseState;
   page: IPageState;
 
@@ -20,6 +18,7 @@ interface AppAction {
   iterator?: number;
   id?: string;
   page?: IPageState;
+  desktopId: number;
 }
 
 export { GlobalState, AppAction, AppState };

@@ -4,7 +4,6 @@ import { getTheme, MODE } from '../../themes';
 import { createGlobalStyle } from "styled-components";
 import '../../main.css';
 
-import ReactGridLayout from '../../reactGridLayout/components/ReactGridLayout';
 import Layout from './Layout';
 import Router from '../../pages/components/Router';
 

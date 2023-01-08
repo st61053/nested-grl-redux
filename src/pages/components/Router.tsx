@@ -1,13 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import ReactGridLayout from "../../reactGridLayout/components/ReactGridLayout";
+import Desktop from "../../desktop/components/Desktop";
 
 const ROUTES = [
-  { path: "/", component: <ReactGridLayout /> },
+  { path: "/", component: <Desktop id={1} /> },
 ];
-
-console.log(ROUTES);
-
 
 const Router = () => {
   return (
